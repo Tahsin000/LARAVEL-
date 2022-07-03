@@ -1,3 +1,4 @@
+Xampp version: Welcome to XAMPP for Windows 8.1.6 
 1. unzip the files
 2. copy the "enrolment"
 3. Paste enrolment "C:\xampp\mysql\data" this location
