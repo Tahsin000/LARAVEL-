@@ -57,5 +57,5 @@ Student Profile</li>
 </ul>
 <h3>ERD</h3>
 <p><img src="https://svg.template.creately.com/hwk7ajnl1" alt="" height="450px" /></p>
-<h3> <a src="https://github.com/Tahsin000/STUDENT-ENROLLMENT-SYSTEM/blob/main/Demo/example.mp4?raw=true">Video</a></h3>
-<p>&nbsp;</p>
+<h3><a href="https://github.com/Tahsin000/STUDENT-ENROLLMENT-SYSTEM/blob/main/Demo/example.mp4?raw=true">Video</a></h3>
+<div id="gtx-trans" style="position: absolute; left: -5px; top: 1165.3px;">&nbsp;</div>
