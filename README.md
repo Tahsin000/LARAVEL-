@@ -57,4 +57,8 @@ Student Profile</li>
 </ul>
 <h3>ERD</h3>
 <p><img src="https://svg.template.creately.com/hwk7ajnl1" alt="" height="450px" /></p>
+<h3>Video</h3>
+<video width="600" controls>
+  <source src="Demo/example.mp4" type="video/mp4">
+</video>
 <p>&nbsp;</p>
