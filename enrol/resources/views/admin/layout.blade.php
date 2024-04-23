@@ -63,14 +63,14 @@
                   <p class="Sende-name">View profile</p>
                 </div>
               </a>
-              <a class="dropdown-item" href="{{URL::to('/setting')}}">
+              {{-- <a class="dropdown-item" href="{{URL::to('/setting')}}">
                 <div class="sender-img">
                   <img src="{{asset('images/Setting.svg')}}" alt="">
                 </div>
                 <div class="sender">
                   <p class="Sende-name">Setting</p>
                 </div>
-              </a>
+              </a> --}}
               <a class="dropdown-item" href="{{URL::to('/logout')}}">
                 <div class="sender-img">
                   <img src="{{asset('images/LogOut.svg')}}" alt="">

@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\support\Facades\DB;
+use DB;
 use Illuminate\Support\Facades\Redirect;
 use Session;
+
 Session_start();
 
 class AllstudentController extends Controller
@@ -13,16 +14,16 @@ class AllstudentController extends Controller
     public function allstudent()
     {
 
-        $allstudent_info=DB::table('student_tbl')->get();
+        $allstudent_info = DB::table('student_tbl')->get();
 
-        $manage_student=view('admin.allstudent')->with('all_student_info', $allstudent_info);
+        $manage_student = view('admin.allstudent')->with('all_student_info', $allstudent_info);
 
         return view('admin.layout')->with('allstudent', $manage_student);
 
         //return view('/admin.allstudent');
     }
-    
-// student delete method
+
+    // student delete method
     public function studentdelete($student_id)
     {
         DB::table('student_tbl')->where('student_id', $student_id)->delete();
@@ -30,7 +31,7 @@ class AllstudentController extends Controller
         return Redirect::to('/allstudent');
     }
 
-// student Student-view method
+    // student Student-view method
     public function studentview($student_id)
     {
         $student_description_view = DB::table('student_tbl')->select('*')->where('student_id', $student_id)->first();
@@ -41,11 +42,11 @@ class AllstudentController extends Controller
         // echo "</pre>";
         // return view('admin.studentview');
     }
-// student student-edit method 
+    // student student-edit method 
     public function studentedit($student_id)
     {
         $student_description_view = DB::table('student_tbl')->select('*')->where('student_id', $student_id)->first();
-        
+
         $student_description_view = view('admin.studentedit')->with('student_description_profile', $student_description_view);
         return view('admin.layout')->with('view', $student_description_view);
         return view('admin.studentedit');
@@ -53,8 +54,8 @@ class AllstudentController extends Controller
         // print_r($student_description_view);
         // echo "</pre>";
     }
-// studentupdate
-    public function studentupdate(Request $request,$student_id)
+    // studentupdate
+    public function studentupdate(Request $request, $student_id)
     {
         $date = array();
         $date['student_name'] = $request->student_name;
@@ -75,10 +76,10 @@ class AllstudentController extends Controller
         // print_r($student_id);
         // echo "</pre>";
     }
-// student_own_update
+    // student_own_update
     public function student_own_update(Request $request)
     {
-        $student_id = Session::get('student_id'); 
+        $student_id = Session::get('student_id');
         $date = array();
         $date['student_phone'] = $request->student_phone;
         $date['student_address'] = $request->student_address;
